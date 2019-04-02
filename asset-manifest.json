@@ -1,13 +1,13 @@
 {
-  "main.css": "/cksharma11/Game-Of-Life-React/static/css/main.68c26b15.chunk.css",
-  "main.js": "/cksharma11/Game-Of-Life-React/static/js/main.d4e7aa39.chunk.js",
-  "main.js.map": "/cksharma11/Game-Of-Life-React/static/js/main.d4e7aa39.chunk.js.map",
-  "runtime~main.js": "/cksharma11/Game-Of-Life-React/static/js/runtime~main.294e2b72.js",
-  "runtime~main.js.map": "/cksharma11/Game-Of-Life-React/static/js/runtime~main.294e2b72.js.map",
-  "static/js/2.65aa1cca.chunk.js": "/cksharma11/Game-Of-Life-React/static/js/2.65aa1cca.chunk.js",
-  "static/js/2.65aa1cca.chunk.js.map": "/cksharma11/Game-Of-Life-React/static/js/2.65aa1cca.chunk.js.map",
-  "index.html": "/cksharma11/Game-Of-Life-React/index.html",
-  "precache-manifest.1c0597091025c167b4467dfbc8e042f4.js": "/cksharma11/Game-Of-Life-React/precache-manifest.1c0597091025c167b4467dfbc8e042f4.js",
-  "service-worker.js": "/cksharma11/Game-Of-Life-React/service-worker.js",
-  "static/css/main.68c26b15.chunk.css.map": "/cksharma11/Game-Of-Life-React/static/css/main.68c26b15.chunk.css.map"
+  "main.css": "/Game-Of-Life-React/static/css/main.68c26b15.chunk.css",
+  "main.js": "/Game-Of-Life-React/static/js/main.d4e7aa39.chunk.js",
+  "main.js.map": "/Game-Of-Life-React/static/js/main.d4e7aa39.chunk.js.map",
+  "runtime~main.js": "/Game-Of-Life-React/static/js/runtime~main.09c704ab.js",
+  "runtime~main.js.map": "/Game-Of-Life-React/static/js/runtime~main.09c704ab.js.map",
+  "static/js/2.65aa1cca.chunk.js": "/Game-Of-Life-React/static/js/2.65aa1cca.chunk.js",
+  "static/js/2.65aa1cca.chunk.js.map": "/Game-Of-Life-React/static/js/2.65aa1cca.chunk.js.map",
+  "index.html": "/Game-Of-Life-React/index.html",
+  "precache-manifest.bf8d7adc4f5fd9c97d22f889961ab10d.js": "/Game-Of-Life-React/precache-manifest.bf8d7adc4f5fd9c97d22f889961ab10d.js",
+  "service-worker.js": "/Game-Of-Life-React/service-worker.js",
+  "static/css/main.68c26b15.chunk.css.map": "/Game-Of-Life-React/static/css/main.68c26b15.chunk.css.map"
 }

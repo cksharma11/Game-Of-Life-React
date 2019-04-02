@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/cksharma11/Game-Of-Life-React/precache-manifest.1c0597091025c167b4467dfbc8e042f4.js"
+  "/Game-Of-Life-React/precache-manifest.bf8d7adc4f5fd9c97d22f889961ab10d.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/cksharma11/Game-Of-Life-React/index.html", {
+workbox.routing.registerNavigationRoute("/Game-Of-Life-React/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });
