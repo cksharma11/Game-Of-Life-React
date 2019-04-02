@@ -57,5 +57,9 @@ header{
 }
 
 button:hover{
-    background: rgb(168, 148, 148);;
+    background: rgba(68, 204, 68, 0.87);
+}
+
+button:focus{
+    outline: none;
 }
