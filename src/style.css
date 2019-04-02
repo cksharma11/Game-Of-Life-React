@@ -17,7 +17,7 @@ header{
 
 .dead-cell{
     font-weight: lighter;
-    border-radius: 2px;
+    border-radius: 50%;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -30,7 +30,7 @@ header{
 
 .alive-cell{
     font-weight: lighter;
-    border-radius: 2px;
+    border-radius: 50%;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -53,7 +53,7 @@ header{
     height: 30px;
     width: 100px;
     color: rgba(0, 0, 0, 0.562);
-    border-radius: 2px;
+    border-radius: 3px;
 }
 
 button:hover{
