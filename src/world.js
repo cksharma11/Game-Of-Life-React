@@ -26,6 +26,8 @@ class World extends React.Component {
     renderableWorld.push(
             <div className="evoluation-button">
                 <button onClick={this.startEvoluation.bind(this)}>Start Evolution</button>
+                <button onClick={this.stopEvoluation.bind(this)}>Stop Evolution</button>
+                <button onClick={this.reset.bind(this)}>Reset Evolution</button>
             </div>
         )
     return renderableWorld;
@@ -42,10 +44,19 @@ class World extends React.Component {
   }
 
   startEvoluation(){
-        setInterval(()=>{
+        this.intervalID = setInterval(()=>{
             const nextGenerationWorld = this.evaluateNextGeneration(this.state.cells);
             this.setState({cells:nextGenerationWorld});
         }, 1000)
+  }
+
+  stopEvoluation(){
+    clearInterval(this.intervalID);
+  }
+
+  reset(){
+    this.stopEvoluation();
+    this.setState({ cells : this.createGrid(10) });
   }
 
   createWorld(aliveCells, size) {
