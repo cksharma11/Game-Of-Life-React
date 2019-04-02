@@ -1,12 +1,10 @@
 import React from "react";
-import ReactDOM from "react-dom";
 
 class World extends React.Component {
   constructor(props) {
     super(props);
-    this.cells = this.createGrid(5);
-    this.aliveCells = [];
-    this.state = { aliveCells: this.aliveCells };
+    this.cells = this.createGrid(10);
+    this.state = { cells: this.cells };
   }
 
   createGrid(size) {
@@ -15,30 +13,44 @@ class World extends React.Component {
   }
 
   render() {
-    return this.renderWorld(
-      this.evaluateNextGeneration(this.createWorld(this.state.aliveCells, 5))
-    );
+    return this.renderWorld(this.state.cells);
   }
 
   renderWorld(board) {
     const renderableWorld = board.map((row,rowIndex) => {
       return <div className="world-row">{row.map((cell,colIndex) => {
-          return <div id={rowIndex + "_" + colIndex} key={rowIndex + "_" + colIndex} onClick={this.handleClick.bind(this)} className="dead-cell">{cell}</div>
+          const cellState = this.state.cells[rowIndex][colIndex] == 0 ? "dead-cell" : "alive-cell";
+          return <div id={rowIndex + "_" + colIndex} key={rowIndex + "_" + colIndex} onClick={this.handleClick.bind(this)} className={cellState}>{cell}</div>
       })}</div>;
     });
-    renderableWorld.push(<button></button>)
+    renderableWorld.push(
+            <div className="evoluation-button">
+                <button onClick={this.startEvoluation.bind(this)}>Start Evolution</button>
+            </div>
+        )
     return renderableWorld;
   }
 
   handleClick(event){
       const row = +event.target.id.split("_")[0];
       const col = +event.target.id.split("_")[1];
-      this.setState = { aliveCells: this.aliveCells.push({ row, col }) }
+      const cells = this.state.cells;
+      cells[row][col] = 1;
+    
+      this.setState({ cells: cells });
       event.target.className = "alive-cell";
+  }
+
+  startEvoluation(){
+        setInterval(()=>{
+            const nextGenerationWorld = this.evaluateNextGeneration(this.state.cells);
+            this.setState({cells:nextGenerationWorld});
+        }, 1000)
   }
 
   createWorld(aliveCells, size) {
     let world = this.createGrid(size);
+    console.log(aliveCells);
     for (let aliveCell of aliveCells) {
       world[aliveCell.row][aliveCell.col] = 1;
     }
